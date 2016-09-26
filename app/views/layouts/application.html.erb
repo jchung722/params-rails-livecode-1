@@ -7,8 +7,21 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <header>
+    <h1>This is a Blog.</h1>
+    <nav>
+      <ul>
+        <li>About</li>
+        <li>Posts</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+  </header>
 
 <%= yield %>
 
+<footer>
+  <p> &copy; 2016</p>
+</footer>
 </body>
 </html>

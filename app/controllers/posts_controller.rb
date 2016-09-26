@@ -14,6 +14,9 @@ class PostsController < ApplicationController
         @mypost = post
       end
     end
+    if @mypost == nil
+      @mypost = {id: params[:id].to_i, title: "Did not find", body: ""}
+    end
   end
 
   def new

@@ -2,4 +2,6 @@
   <h1><%= @mypost[:title] %></h1>
   <h2>By: <%= @mypost[:author] %></h2>
   <p><%= @mypost [:body] %></p>
+  <p><%= link_to('edit', edit_path(@mypost[:id])) %></p>
+  <p><%= link_to('delete', delete_path(@mypost[:id])) %></p>
 </article>

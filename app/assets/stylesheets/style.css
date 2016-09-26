@@ -1,0 +1,18 @@
+header{
+  background-color: green;
+  font-family: Helvetica;
+}
+h1 {
+  color: red;
+  display: inline-block;
+}
+nav {
+  width: 50%;
+  display: inline-block;
+}
+li {
+  display: inline-block;}
+
+footer{
+  background-color: blue;
+}
