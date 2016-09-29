@@ -1,2 +1,35 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<h1>Create a Blog Post</h1>
+
+  <%= form_for @mypost,
+    url: create_path do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+
+    <%= f.label :body %>
+    <%= f.text_area :body %>
+
+    <%= f.submit %>
+  <% end %>
+
+<!-- <form name="new-post" action="create" method="post">
+
+  <label for="title">Title:</label>
+  <input type="text" name="title">
+
+  <label for="author">Author:</label>
+  <input type="text" name="author">
+
+  <label for="body">Body:</label>
+  <textarea id="body" name="body" rows=8 cols=40>
+  </textarea>
+
+  <%= tag(:input, :type => "hidden",
+    :name => request_forgery_protection_token.to_s,
+    :value => form_authenticity_token) %>
+
+  <button type="submit">Submit</button>
+
+</form> -->

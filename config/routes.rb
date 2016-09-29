@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get 'posts/index', as: 'index'
 
+  post 'posts/create' => 'posts#create', as: 'create'
+
   get 'posts/show'
 
   get 'posts/show/:id' => 'posts#show', as: 'show'
@@ -13,6 +15,8 @@ Rails.application.routes.draw do
   get 'posts/:id/edit' => 'posts#edit', as: 'edit'
 
   get 'posts/update'
+
+  put 'posts/:id/update' => 'posts#update'
 
   get 'posts/:id/destroy' => 'posts#destroy', as: 'delete'
 

@@ -8,12 +8,16 @@
 </head>
 <body>
   <header>
-    <h1>This is a Blog.</h1>
+    <%= image_tag "http://fillmurray.com/200/300", alt: "Fill MURRAY" %>
     <nav>
       <ul>
-        <li>About</li>
+        <li>
+          <%= link_to "Home", root_path %>
+        </li>
+        <li>
+          <%= link_to "New Post", posts_new_path %>
+        </li>
         <li>Posts</li>
-        <li>Contact</li>
       </ul>
     </nav>
   </header>

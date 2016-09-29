@@ -1,2 +1,21 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<h1>Edit Blog Post</h1>
+
+<form name="post" action="update" method="post">
+  <input type="hidden" name="_method" value="PUT">
+
+  <label for="title">Title:</label>
+  <input type="text" name="title" value="<%= @mypost[:title] %>" >
+
+  <label for="author">Author:</label>
+  <input type="text" name="author" value="<%= @mypost[:author] %>" >
+
+  <label for="body">Body:</label>
+  <textarea id="body" name="body" rows=8 cols=40>
+    <%= @mypost[:body] %>
+  </textarea>
+
+  <%= tag(:input, :type => "hidden",
+    :name => request_forgery_protection_token.to_s,
+    :value => form_authenticity_token) %>
+  <button type="update">Update</button>
+</form>
